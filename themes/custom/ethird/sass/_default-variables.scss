@@ -1,0 +1,222 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+//** Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Secular+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+
+//** Import the mixins
+@import "../sasscss3mixins/css3-mixins.scss";
+
+//** Font, line-height, and color for body text, headings, and more.
+$font-stack:               Secular One, Roboto, sans-serif;
+$font-family-sans-serif:   "Secular One", "Roboto", sans-serif !default;
+$font-weight:              400 !default;
+$font-family-base:         $font-family-sans-serif !default;
+
+$font-size-base:          14px;
+$font-size-xlarge:        ceil(($font-size-base * 1.5)) !default; // ~21px
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-medium:         ceil(($font-size-base * 1.00)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12p
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$headings-blue:          #14CADB;
+$heading-nocolor:         #ffffff;
+
+//** Setting link and major color attributes.
+$brand-primary: #F41361;
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color, 20%);
+$link-hover-decoration: none;
+
+//** Background color for `<body>`.
+$body-bg: #FFFFFF;
+
+
+$navbar-default-bg:                #FFFFFF;
+$navbar-default-color:             $navbar-default-bg;
+$navbar-default-border:            $navbar-default-bg;
+
+
+//** define the base path before the mixin
+$imagedir:'../images/';
+
+//** Border color for table and cell borders.
+$table-border-color:            #FFFFFF;
+
+// Basics of a navbar
+$navbar-height:                    30px;
+
+// General vars
+
+$ethird-padding: 60px;
+$event-list-padding: 30px;
+
+// Media queries
+
+$screen-lg-min: 1200px;
+$screen-md-min: 992px;
+$screen-sm-min: 768px;
+
+body {
+  font: 100% $font-stack;
+}
+
+#block-ethird-main-menu {
+  float: right;
+  padding-right: 25%;
+}
+
+.navbar-nav {
+  padding: 2.0em 1.5em 0 2.0em;
+}
+
+.logo-img {
+  position: absolute;
+  top: 0px;
+}
+.bar-img {
+  float: right;
+  top: 0px;
+}
+
+.views-field-field-page-header-image {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+}
+
+.event-header-body p {
+  font-size: $font-size-large;
+}
+
+.events {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 67%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 67%);
+}
+
+.date-badge {
+  position: absolute;
+  top: 0px;
+  left: 70%;
+  text-align: center;
+  width: 40px;
+  height: 80px;
+  margin-top: $event-list-padding;
+  background-color: #ffffff;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 67%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 67%);
+}
+
+.date-badge, a, h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: Roboto;
+  font-size: $font-size-medium;
+}
+
+.featured-event-table h1 {
+    color: $headings-blue;
+}
+
+.month {
+    color: $headings-blue;
+}
+
+h1.page-header {
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0.500em;
+  width: 12em;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.attachment-before, .featured-event {
+    padding-bottom: $ethird-padding;
+}
+
+.event-list-item {
+  padding-bottom: $ethird-padding;
+}
+
+span > a::before{
+content: "______";
+clear: both;
+display: block;
+}
+
+.featured-event-link {
+  clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+  -webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+  background-color: $brand-primary;
+  padding: 1.0em 1.5em 1.0em 2.0em;
+  width: 10em;
+}
+
+.featured-event-link > a {
+  color: #ffffff;
+}
+.event-list-item {
+  padding-top: $event-list-padding;
+}
+
+time, .views-field-field-event-end-date {
+  color: $headings-blue;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Sass Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .bar-img img {
+    width: 80%;
+  }
+  #block-ethird-main-menu {
+    padding-right: 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .bar-img img {
+    width: 80%;
+  }
+  #block-ethird-main-menu {
+    padding-right: 20%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+  .bar-img img {
+    width: 100%;
+  }
+  #block-ethird-main-menu {
+    padding-right: 20%;
+  }
+}
